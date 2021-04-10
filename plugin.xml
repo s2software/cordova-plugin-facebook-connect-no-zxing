@@ -187,6 +187,12 @@
 
         <hook type="before_plugin_install" src="scripts/ios/before_plugin_install.js" />
         <hook type="after_prepare" src="scripts/ios/after_prepare.js" />
+
+        <!-- fix iOS: 'FBSDKCoreKit/FBSDKCoreKit.h' file not found -->
+        <!-- ref: https://github.com/cordova-plugin-facebook-connect/cordova-plugin-facebook-connect/blob/master/docs/ios/README.md#fbsdkcorekitfbsdkcorekith-file-not-found -->
+        <framework src="FBSDKCoreKit" type="podspec" spec="9.1.0" />
+        <framework src="FBSDKLoginKit" type="podspec" spec="9.1.0" />
+        <framework src="FBSDKShareKit" type="podspec" spec="9.1.0" />
     </platform>
 
     <!-- browser -->
